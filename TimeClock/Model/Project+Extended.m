@@ -28,14 +28,14 @@
 
 @implementation Project (Extended)
 
-- (NSDate*) begin
+- (NSDate*) startDate
 {
-    return [self valueForKeyPath:@"entries.@min.start"];
+    return [self valueForKeyPath:@"entries.@min.startDate"];
 }
 
-- (NSDate*) finish
+- (NSDate*) endDate
 {
-    return [self valueForKeyPath:@"entries.@max.end"];
+    return [self valueForKeyPath:@"entries.@max.endDate"];
 }
 
 - (NSNumber*) totalTime

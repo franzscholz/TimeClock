@@ -26,8 +26,8 @@
 
 @interface Project (Extended)
 
-- (NSDate*) begin;
-- (NSDate*) finish;
+- (NSDate*) startDate;
+- (NSDate*) endDate;
 - (NSNumber*) totalTime;
 
 - (NSArray*) timesSummarizedByDate;
