@@ -2,7 +2,7 @@
 //  Project.h
 //  TimeClock
 //
-//  Created by Franz Scholz on 25.04.13.
+//  Created by Franz Scholz on 28.04.13.
 //  Copyright (c) 2013 Franz Scholz. All rights reserved.
 //
 
@@ -13,9 +13,9 @@
 
 @interface Project : NSManagedObject
 
+@property (nonatomic, retain) NSDate * startDate;
+@property (nonatomic, retain) NSDate * endDate;
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSDate * begin;
-@property (nonatomic, retain) NSDate * finish;
 @property (nonatomic, retain) NSNumber * totalTime;
 @property (nonatomic, retain) NSSet *entries;
 @end
