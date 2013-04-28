@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Entry" representedClassName="Entry" syncable="YES">
+        <attribute name="comment" attributeType="String" syncable="YES"/>
+        <attribute name="duration" transient="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="end" attributeType="Date" syncable="YES"/>
+        <attribute name="start" attributeType="Date" syncable="YES"/>
+        <relationship name="project" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="entries" inverseEntity="Project" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="Project" representedClassName="Project" syncable="YES">
+        <attribute name="begin" optional="YES" transient="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="finish" optional="YES" transient="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="totalTime" optional="YES" transient="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="entries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Entry" inverseName="project" inverseEntity="Entry" indexed="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Entry" positionX="160" positionY="192" width="128" height="118"/>
+        <element name="Project" positionX="-227" positionY="126" width="128" height="118"/>
+    </elements>
+</model>
