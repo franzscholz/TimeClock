@@ -89,7 +89,7 @@
 	NSError *error;
 	NSFetchRequest *request = [[NSFetchRequest alloc] init];
 	[request setEntity:[NSEntityDescription entityForName:@"Project" inManagedObjectContext:self.managedObjectContext]];
-    NSArray *sortDescriptors = [NSArray arrayWithObjects:[NSSortDescriptor sortDescriptorWithKey:@"finish" ascending:TRUE], nil];
+    NSArray *sortDescriptors = [NSArray arrayWithObjects:[NSSortDescriptor sortDescriptorWithKey:@"endDate" ascending:TRUE], nil];
     [request setSortDescriptors:sortDescriptors];
 	
 	NSArray *projects = [self.managedObjectContext executeFetchRequest:request error:&error];
