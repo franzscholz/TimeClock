@@ -2,7 +2,7 @@
 //  Entry.m
 //  TimeClock
 //
-//  Created by Franz Scholz on 25.04.13.
+//  Created by Franz Scholz on 28.04.13.
 //  Copyright (c) 2013 Franz Scholz. All rights reserved.
 //
 
@@ -13,9 +13,9 @@
 @implementation Entry
 
 @dynamic comment;
-@dynamic end;
-@dynamic start;
 @dynamic duration;
+@dynamic endDate;
+@dynamic startDate;
 @dynamic project;
 
 @end

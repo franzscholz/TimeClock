@@ -62,7 +62,7 @@ static NSDateFormatter *yearMonthDayFormatter = nil;
 - (void) appendEntry:(Entry *)entry
 {
 	if(date == nil) {
-		date = entry.start;
+		date = entry.startDate;
 	}
 	hours += entry.duration.doubleValue;
 	if([label length] > 0) {
@@ -96,7 +96,7 @@ static NSDateFormatter *yearMonthDayFormatter = nil;
 }
 
 + (void) summarizeEntry: (Entry *) entry dateFormatter: (NSDateFormatter *) dateFormatter dayEntries: (NSMutableDictionary *) dayEntries  {
-		NSString *key = [dateFormatter stringFromDate:entry.start];
+		NSString *key = [dateFormatter stringFromDate:entry.startDate];
 		if(key == nil) {
 			NSLog(@"Key is nil for %@ and %@", dateFormatter, entry);
 		}

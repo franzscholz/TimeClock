@@ -34,7 +34,7 @@
 {
     [self willAccessValueForKey:@"end"];
     [self willAccessValueForKey:@"start"];
-	NSTimeInterval interval = [self.end timeIntervalSinceDate:self.start];
+	NSTimeInterval interval = [self.endDate timeIntervalSinceDate:self.startDate];
     [self didAccessValueForKey:@"start"];
     [self didAccessValueForKey:@"end"];
     return [NSNumber numberWithDouble:(interval / SECONDS_PER_HOUR)];
@@ -42,7 +42,7 @@
 
 - (NSString *) description
 {
-	return [NSString stringWithFormat:@"%@: %@ %@ from %@ to %@", self.project.name, self.comment, self.duration, self.start, self.end];
+	return [NSString stringWithFormat:@"%@: %@ %@ from %@ to %@", self.project.name, self.comment, self.duration, self.startDate, self.endDate];
 }
 
 
