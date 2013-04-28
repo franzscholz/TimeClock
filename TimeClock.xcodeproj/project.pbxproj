@@ -18,6 +18,11 @@
 		304715EC1727EEEE00FBC523 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304715C91727EEED00FBC523 /* Cocoa.framework */; };
 		304715F41727EEEE00FBC523 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 304715F21727EEEE00FBC523 /* InfoPlist.strings */; };
 		304715F71727EEEE00FBC523 /* TimeClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 304715F61727EEEE00FBC523 /* TimeClockTests.m */; };
+		304716081727EF1200FBC523 /* Entry+Extended.m in Sources */ = {isa = PBXBuildFile; fileRef = 304716011727EF1200FBC523 /* Entry+Extended.m */; };
+		304716091727EF1200FBC523 /* Project+Extended.m in Sources */ = {isa = PBXBuildFile; fileRef = 304716031727EF1200FBC523 /* Project+Extended.m */; };
+		3047160A1727EF1200FBC523 /* SummarizedEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 304716051727EF1200FBC523 /* SummarizedEntry.m */; };
+		3047163917293A7F00FBC523 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 3047163817293A7F00FBC523 /* Entry.m */; };
+		3047163C17293A8100FBC523 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 3047163B17293A8100FBC523 /* Project.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,16 @@
 		304715F31727EEEE00FBC523 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		304715F51727EEEE00FBC523 /* TimeClockTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeClockTests.h; sourceTree = "<group>"; };
 		304715F61727EEEE00FBC523 /* TimeClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeClockTests.m; sourceTree = "<group>"; };
+		304716001727EF1200FBC523 /* Entry+Extended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Entry+Extended.h"; path = "Model/Entry+Extended.h"; sourceTree = "<group>"; };
+		304716011727EF1200FBC523 /* Entry+Extended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Entry+Extended.m"; path = "Model/Entry+Extended.m"; sourceTree = "<group>"; };
+		304716021727EF1200FBC523 /* Project+Extended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Project+Extended.h"; path = "Model/Project+Extended.h"; sourceTree = "<group>"; };
+		304716031727EF1200FBC523 /* Project+Extended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Project+Extended.m"; path = "Model/Project+Extended.m"; sourceTree = "<group>"; };
+		304716041727EF1200FBC523 /* SummarizedEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SummarizedEntry.h; path = Model/SummarizedEntry.h; sourceTree = "<group>"; };
+		304716051727EF1200FBC523 /* SummarizedEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SummarizedEntry.m; path = Model/SummarizedEntry.m; sourceTree = "<group>"; };
+		3047163717293A7F00FBC523 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entry.h; path = Model/Entry.h; sourceTree = "<group>"; };
+		3047163817293A7F00FBC523 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entry.m; path = Model/Entry.m; sourceTree = "<group>"; };
+		3047163A17293A8100FBC523 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Project.h; path = Model/Project.h; sourceTree = "<group>"; };
+		3047163B17293A8100FBC523 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Project.m; path = Model/Project.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +131,10 @@
 		304715CF1727EEED00FBC523 /* TimeClock */ = {
 			isa = PBXGroup;
 			children = (
+				3047160C17280F8E00FBC523 /* Model */,
 				304715DB1727EEED00FBC523 /* TimeClockAppDelegate.h */,
 				304715DC1727EEED00FBC523 /* TimeClockAppDelegate.m */,
 				304715DE1727EEEE00FBC523 /* MainMenu.xib */,
-				304715E11727EEEE00FBC523 /* TimeClock.xcdatamodeld */,
 				304715D01727EEED00FBC523 /* Supporting Files */,
 			);
 			path = TimeClock;
@@ -154,6 +169,24 @@
 				304715F21727EEEE00FBC523 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3047160C17280F8E00FBC523 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				304716001727EF1200FBC523 /* Entry+Extended.h */,
+				304716011727EF1200FBC523 /* Entry+Extended.m */,
+				304716021727EF1200FBC523 /* Project+Extended.h */,
+				304716031727EF1200FBC523 /* Project+Extended.m */,
+				304716041727EF1200FBC523 /* SummarizedEntry.h */,
+				304716051727EF1200FBC523 /* SummarizedEntry.m */,
+				304715E11727EEEE00FBC523 /* TimeClock.xcdatamodeld */,
+				3047163A17293A8100FBC523 /* Project.h */,
+				3047163B17293A8100FBC523 /* Project.m */,
+				3047163717293A7F00FBC523 /* Entry.h */,
+				3047163817293A7F00FBC523 /* Entry.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +301,11 @@
 				304715D61727EEED00FBC523 /* main.m in Sources */,
 				304715DD1727EEED00FBC523 /* TimeClockAppDelegate.m in Sources */,
 				304715E31727EEEE00FBC523 /* TimeClock.xcdatamodeld in Sources */,
+				304716081727EF1200FBC523 /* Entry+Extended.m in Sources */,
+				304716091727EF1200FBC523 /* Project+Extended.m in Sources */,
+				3047160A1727EF1200FBC523 /* SummarizedEntry.m in Sources */,
+				3047163917293A7F00FBC523 /* Entry.m in Sources */,
+				3047163C17293A8100FBC523 /* Project.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +495,7 @@
 				304715FC1727EEEE00FBC523 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		304715FD1727EEEE00FBC523 /* Build configuration list for PBXNativeTarget "TimeClockTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +504,7 @@
 				304715FF1727EEEE00FBC523 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -475,7 +515,8 @@
 				304715E21727EEEE00FBC523 /* TimeClock.xcdatamodel */,
 			);
 			currentVersion = 304715E21727EEEE00FBC523 /* TimeClock.xcdatamodel */;
-			path = TimeClock.xcdatamodeld;
+			name = TimeClock.xcdatamodeld;
+			path = Model;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
