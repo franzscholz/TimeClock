@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Documentation.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>TimeClock.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>304715E81727EEEE00FBC523</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>30CBEEA1172D140B003CF1C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
