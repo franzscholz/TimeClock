@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		301F0DBB172CF8DA00690F00 /* TimeClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 301F0DBA172CF8DA00690F00 /* TimeClock.m */; };
+		301F0DBF172CFC5800690F00 /* TimeClock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 301F0DBD172CFC5800690F00 /* TimeClock.xcdatamodeld */; };
+		301F0DC3172CFE8D00690F00 /* TimeClock+Output.m in Sources */ = {isa = PBXBuildFile; fileRef = 301F0DC2172CFE8D00690F00 /* TimeClock+Output.m */; };
+		301F0DC6172CFEFA00690F00 /* TimeClock+Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 301F0DC5172CFEFA00690F00 /* TimeClock+Parser.m */; };
+		301F0DC9172D000900690F00 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 301F0DC8172D000900690F00 /* Entry.m */; };
+		301F0DCC172D000900690F00 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 301F0DCB172D000900690F00 /* Project.m */; };
+		301F0DCE172D025900690F00 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 301F0DCD172D025900690F00 /* README.md */; };
 		304715CA1727EEED00FBC523 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304715C91727EEED00FBC523 /* Cocoa.framework */; };
 		304715D41727EEED00FBC523 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 304715D21727EEED00FBC523 /* InfoPlist.strings */; };
 		304715D61727EEED00FBC523 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 304715D51727EEED00FBC523 /* main.m */; };
 		304715DA1727EEED00FBC523 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 304715D81727EEED00FBC523 /* Credits.rtf */; };
 		304715DD1727EEED00FBC523 /* TimeClockAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 304715DC1727EEED00FBC523 /* TimeClockAppDelegate.m */; };
 		304715E01727EEEE00FBC523 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304715DE1727EEEE00FBC523 /* MainMenu.xib */; };
-		304715E31727EEEE00FBC523 /* TimeClock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 304715E11727EEEE00FBC523 /* TimeClock.xcdatamodeld */; };
 		304715EB1727EEEE00FBC523 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304715EA1727EEEE00FBC523 /* SenTestingKit.framework */; };
 		304715EC1727EEEE00FBC523 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304715C91727EEED00FBC523 /* Cocoa.framework */; };
 		304715F41727EEEE00FBC523 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 304715F21727EEEE00FBC523 /* InfoPlist.strings */; };
@@ -21,8 +27,6 @@
 		304716081727EF1200FBC523 /* Entry+Extended.m in Sources */ = {isa = PBXBuildFile; fileRef = 304716011727EF1200FBC523 /* Entry+Extended.m */; };
 		304716091727EF1200FBC523 /* Project+Extended.m in Sources */ = {isa = PBXBuildFile; fileRef = 304716031727EF1200FBC523 /* Project+Extended.m */; };
 		3047160A1727EF1200FBC523 /* SummarizedEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 304716051727EF1200FBC523 /* SummarizedEntry.m */; };
-		3047163917293A7F00FBC523 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 3047163817293A7F00FBC523 /* Entry.m */; };
-		3047163C17293A8100FBC523 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 3047163B17293A8100FBC523 /* Project.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		301F0DB9172CF8DA00690F00 /* TimeClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeClock.h; path = Model/TimeClock.h; sourceTree = "<group>"; };
+		301F0DBA172CF8DA00690F00 /* TimeClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeClock.m; path = Model/TimeClock.m; sourceTree = "<group>"; };
+		301F0DBE172CFC5800690F00 /* TimeClock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimeClock.xcdatamodel; sourceTree = "<group>"; };
+		301F0DC1172CFE8D00690F00 /* TimeClock+Output.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TimeClock+Output.h"; path = "Model/TimeClock+Output.h"; sourceTree = "<group>"; };
+		301F0DC2172CFE8D00690F00 /* TimeClock+Output.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TimeClock+Output.m"; path = "Model/TimeClock+Output.m"; sourceTree = "<group>"; };
+		301F0DC4172CFEFA00690F00 /* TimeClock+Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TimeClock+Parser.h"; sourceTree = "<group>"; };
+		301F0DC5172CFEFA00690F00 /* TimeClock+Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TimeClock+Parser.m"; sourceTree = "<group>"; };
+		301F0DC7172D000900690F00 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entry.h; path = Model/Entry.h; sourceTree = "<group>"; };
+		301F0DC8172D000900690F00 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entry.m; path = Model/Entry.m; sourceTree = "<group>"; };
+		301F0DCA172D000900690F00 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Project.h; path = Model/Project.h; sourceTree = "<group>"; };
+		301F0DCB172D000900690F00 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Project.m; path = Model/Project.m; sourceTree = "<group>"; };
+		301F0DCD172D025900690F00 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		304715C61727EEED00FBC523 /* TimeClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		304715C91727EEED00FBC523 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		304715CC1727EEED00FBC523 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -49,7 +65,6 @@
 		304715DB1727EEED00FBC523 /* TimeClockAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeClockAppDelegate.h; sourceTree = "<group>"; };
 		304715DC1727EEED00FBC523 /* TimeClockAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeClockAppDelegate.m; sourceTree = "<group>"; };
 		304715DF1727EEEE00FBC523 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		304715E21727EEEE00FBC523 /* TimeClock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimeClock.xcdatamodel; sourceTree = "<group>"; };
 		304715E91727EEEE00FBC523 /* TimeClockTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeClockTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		304715EA1727EEEE00FBC523 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		304715F11727EEEE00FBC523 /* TimeClockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TimeClockTests-Info.plist"; sourceTree = "<group>"; };
@@ -62,10 +77,6 @@
 		304716031727EF1200FBC523 /* Project+Extended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Project+Extended.m"; path = "Model/Project+Extended.m"; sourceTree = "<group>"; };
 		304716041727EF1200FBC523 /* SummarizedEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SummarizedEntry.h; path = Model/SummarizedEntry.h; sourceTree = "<group>"; };
 		304716051727EF1200FBC523 /* SummarizedEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SummarizedEntry.m; path = Model/SummarizedEntry.m; sourceTree = "<group>"; };
-		3047163717293A7F00FBC523 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entry.h; path = Model/Entry.h; sourceTree = "<group>"; };
-		3047163817293A7F00FBC523 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entry.m; path = Model/Entry.m; sourceTree = "<group>"; };
-		3047163A17293A8100FBC523 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Project.h; path = Model/Project.h; sourceTree = "<group>"; };
-		3047163B17293A8100FBC523 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Project.m; path = Model/Project.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +103,7 @@
 		304715BD1727EEED00FBC523 = {
 			isa = PBXGroup;
 			children = (
+				301F0DCD172D025900690F00 /* README.md */,
 				304715CF1727EEED00FBC523 /* TimeClock */,
 				304715EF1727EEEE00FBC523 /* TimeClockTests */,
 				304715C81727EEED00FBC523 /* Frameworks */,
@@ -174,17 +186,23 @@
 		3047160C17280F8E00FBC523 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				301F0DBD172CFC5800690F00 /* TimeClock.xcdatamodeld */,
+				301F0DCA172D000900690F00 /* Project.h */,
+				301F0DCB172D000900690F00 /* Project.m */,
+				301F0DC7172D000900690F00 /* Entry.h */,
+				301F0DC8172D000900690F00 /* Entry.m */,
 				304716001727EF1200FBC523 /* Entry+Extended.h */,
 				304716011727EF1200FBC523 /* Entry+Extended.m */,
 				304716021727EF1200FBC523 /* Project+Extended.h */,
 				304716031727EF1200FBC523 /* Project+Extended.m */,
 				304716041727EF1200FBC523 /* SummarizedEntry.h */,
 				304716051727EF1200FBC523 /* SummarizedEntry.m */,
-				304715E11727EEEE00FBC523 /* TimeClock.xcdatamodeld */,
-				3047163A17293A8100FBC523 /* Project.h */,
-				3047163B17293A8100FBC523 /* Project.m */,
-				3047163717293A7F00FBC523 /* Entry.h */,
-				3047163817293A7F00FBC523 /* Entry.m */,
+				301F0DB9172CF8DA00690F00 /* TimeClock.h */,
+				301F0DBA172CF8DA00690F00 /* TimeClock.m */,
+				301F0DC1172CFE8D00690F00 /* TimeClock+Output.h */,
+				301F0DC2172CFE8D00690F00 /* TimeClock+Output.m */,
+				301F0DC4172CFEFA00690F00 /* TimeClock+Parser.h */,
+				301F0DC5172CFEFA00690F00 /* TimeClock+Parser.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -264,6 +282,7 @@
 				304715D41727EEED00FBC523 /* InfoPlist.strings in Resources */,
 				304715DA1727EEED00FBC523 /* Credits.rtf in Resources */,
 				304715E01727EEEE00FBC523 /* MainMenu.xib in Resources */,
+				301F0DCE172D025900690F00 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,12 +319,15 @@
 			files = (
 				304715D61727EEED00FBC523 /* main.m in Sources */,
 				304715DD1727EEED00FBC523 /* TimeClockAppDelegate.m in Sources */,
-				304715E31727EEEE00FBC523 /* TimeClock.xcdatamodeld in Sources */,
 				304716081727EF1200FBC523 /* Entry+Extended.m in Sources */,
 				304716091727EF1200FBC523 /* Project+Extended.m in Sources */,
 				3047160A1727EF1200FBC523 /* SummarizedEntry.m in Sources */,
-				3047163917293A7F00FBC523 /* Entry.m in Sources */,
-				3047163C17293A8100FBC523 /* Project.m in Sources */,
+				301F0DBB172CF8DA00690F00 /* TimeClock.m in Sources */,
+				301F0DBF172CFC5800690F00 /* TimeClock.xcdatamodeld in Sources */,
+				301F0DC3172CFE8D00690F00 /* TimeClock+Output.m in Sources */,
+				301F0DC6172CFEFA00690F00 /* TimeClock+Parser.m in Sources */,
+				301F0DC9172D000900690F00 /* Entry.m in Sources */,
+				301F0DCC172D000900690F00 /* Project.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,14 +531,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		304715E11727EEEE00FBC523 /* TimeClock.xcdatamodeld */ = {
+		301F0DBD172CFC5800690F00 /* TimeClock.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				304715E21727EEEE00FBC523 /* TimeClock.xcdatamodel */,
+				301F0DBE172CFC5800690F00 /* TimeClock.xcdatamodel */,
 			);
-			currentVersion = 304715E21727EEEE00FBC523 /* TimeClock.xcdatamodel */;
+			currentVersion = 301F0DBE172CFC5800690F00 /* TimeClock.xcdatamodel */;
 			name = TimeClock.xcdatamodeld;
-			path = Model;
+			path = Model/TimeClock.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
