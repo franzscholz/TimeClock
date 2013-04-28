@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		30CBEEA1172D140B003CF1C1 /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 30CBEEA4172D140B003CF1C1 /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				30CBEEA5172D1416003CF1C1 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		301F0DBB172CF8DA00690F00 /* TimeClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 301F0DBA172CF8DA00690F00 /* TimeClock.m */; };
 		301F0DBF172CFC5800690F00 /* TimeClock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 301F0DBD172CFC5800690F00 /* TimeClock.xcdatamodeld */; };
@@ -270,6 +284,7 @@
 			targets = (
 				304715C51727EEED00FBC523 /* TimeClock */,
 				304715E81727EEEE00FBC523 /* TimeClockTests */,
+				30CBEEA1172D140B003CF1C1 /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -309,6 +324,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		30CBEEA5172D1416003CF1C1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/appledoc \\\n--project-name \"TimeClock\" \\\n--project-company \"franzscholz.net\" \\\n--company-id \"net.franzscholz\" \\\n--output ~/help \\\n--logformat xcode \\\n--keep-undocumented-members \\\n--keep-undocumented-objects \\\n--exit-threshold 2 \\\n--ignore \".m\" \\\n--ignore \"TimeClockTests\" \\\n\"${PROJECT_DIR}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -498,6 +526,22 @@
 			};
 			name = Release;
 		};
+		30CBEEA2172D140B003CF1C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		30CBEEA3172D140B003CF1C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -527,6 +571,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		30CBEEA4172D140B003CF1C1 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30CBEEA2172D140B003CF1C1 /* Debug */,
+				30CBEEA3172D140B003CF1C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
