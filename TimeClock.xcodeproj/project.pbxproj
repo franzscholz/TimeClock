@@ -475,11 +475,11 @@
 		304715FB1727EEEE00FBC523 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
+				ARCHS = "$(ARCHS_STANDARD)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TimeClock/TimeClock-Prefix.pch";
 				INFOPLIST_FILE = "TimeClock/TimeClock-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TimeClock;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -487,11 +487,11 @@
 		304715FC1727EEEE00FBC523 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
+				ARCHS = "$(ARCHS_STANDARD)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TimeClock/TimeClock-Prefix.pch";
 				INFOPLIST_FILE = "TimeClock/TimeClock-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TimeClock;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -579,6 +579,7 @@
 				30CBEEA3172D140B003CF1C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
