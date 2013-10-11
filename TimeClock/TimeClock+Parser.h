@@ -27,7 +27,7 @@
 #pragma mark Read from File
 
 - (void)readFromString:(NSString *)string;
-- (void)readFromURL: (NSURL *)url error:(NSError **)error;
-- (void)readFromDefaultError:(NSError **)error;
+- (BOOL)readFromURL: (NSURL *)url error:(NSError **)error;
+- (BOOL)readFromDefaultError:(NSError **)error;
 
 @end
