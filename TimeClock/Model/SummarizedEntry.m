@@ -113,6 +113,7 @@ static NSDateFormatter *yearMonthDayFormatter = nil;
 		NSString *key = [dateFormatter stringFromDate:entry.startDate];
 		if(key == nil) {
 			NSLog(@"Key is nil for %@ and %@", dateFormatter, entry);
+            return;
 		}
 		SummarizedEntry *summarizedEntry = [dayEntries objectForKey:key];
 		
