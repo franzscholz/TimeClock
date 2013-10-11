@@ -91,18 +91,19 @@
 	}];
 }
 
-- (void)readFromURL:(NSURL *)url error:(NSError**)error
+- (BOOL)readFromURL:(NSURL *)url error:(NSError**)error
 {
 	NSLog(@"readFromURL:%@", url);
 	NSString *logString = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:error];
 	if(logString == nil) {
-		return;
+		return NO;
 	}
     
 	[self readFromString: logString];
+    return YES;
 }
 
-- (void)readFromDefaultError:(NSError**)error
+- (BOOL)readFromDefaultError:(NSError**)error
 {
 	return [self readFromURL:[NSURL fileURLWithPath:[@"~/.timelog" stringByExpandingTildeInPath]] error:error];
 }
