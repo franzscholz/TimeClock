@@ -39,7 +39,7 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in TimeClockTests");
+    XCTFail(@"Unit tests are not implemented yet in TimeClockTests");
 }
 
 @end
