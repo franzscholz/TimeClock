@@ -30,58 +30,69 @@
 
 - (Entry *)parseLine:(NSString*)curLine fromLastEntry:(Entry*)lastEntry
 {
-	NSRange range;
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] initWithDateFormat:@"%y/%m/%d %H:%M:%S" allowNaturalLanguage:true];
 	NSArray *line = [curLine componentsSeparatedByString:@" "];
-	if([line count] >= 3) {
-		NSString *inOut = [[line objectAtIndex:0] lowercaseString];
-		range.location = 1;
-		range.length = 2;
-		NSString *dateString = [[line subarrayWithRange:range] componentsJoinedByString:@" "];
-		NSDate *date = [NSDate dateWithNaturalLanguageString:dateString];
-		NSLog(@"In/Out: \"%@\", Date: \"%@\"", inOut, [date description]);
-		if([inOut hasPrefix:@"i"]) {
-			NSDate *inDate;
-			NSString *inProject;
-			NSString *comment;
-			// Clocking in
-			inDate = date;
-			range.location = 3;
-			range.length = [line count] - range.location;
-			inProject = [line objectAtIndex:range.location];
-			if([inProject hasPrefix:@"["]) {
-				range.location++;
-				range.length--;
-				if(range.length > 0) {
-					comment = [[line subarrayWithRange:range] componentsJoinedByString:@" "];
-				}
-				else {
-					comment = NSLocalizedString(@"n/a", @"Not available");
-				}
-				range.location = 1;
-				range.length = [inProject length] - range.location - 1;
-				inProject = [inProject substringWithRange:range];
-			}
-			else {
-				inProject = NSLocalizedString(@"no Project", @"no project specified");
-				comment = [[line subarrayWithRange:range] componentsJoinedByString:@" "];
-			}
-			Project *project = [self projectWithName:inProject];
-			Entry *entry = [self newEntryWithProject:project startDate:inDate endDate:nil comment:comment];
-			return entry;
-		}
-		else {
-			// Clocking out
-			lastEntry.endDate = date;
-			return lastEntry;
-		}
-	}
-	else {
+    
+    // Check if there is enough input
+	if([line count] < 3) {
 		if([line count] > 0) {
 			NSLog(@"Invalid line \"%@\"", curLine);
 		}
-	}
-	return nil;
-	
+        return nil;
+    }
+
+    // Clocking in or out
+    NSString *inOut = [[line objectAtIndex:0] lowercaseString];
+    if (![inOut hasPrefix:@"i"] && ![inOut hasPrefix:@"o"]) {
+        NSLog(@"Invalid action %@ in line \"%@\"", inOut, curLine);
+        return nil;
+    }
+    
+    // Get the date
+    NSString *dateString = [[line subarrayWithRange:NSMakeRange(1, 2)] componentsJoinedByString:@" "];
+    NSDate* date = nil;
+    NSString* errorDescription = nil;
+    [dateFormatter getObjectValue:&date forString:dateString errorDescription:&errorDescription];
+    if(date == nil) {
+        NSLog(@"Invalid date %@ line \"%@\": %@", dateString, curLine, errorDescription);
+        return nil;
+        
+    }
+
+    NSLog(@"In/Out: \"%@\", Date: \"%@\"", inOut, [dateFormatter stringFromDate:date]);
+
+    if([inOut hasPrefix:@"i"]) {
+        // Clocking in
+        NSDate *inDate;
+        NSString *inProject;
+        NSString *comment;
+        inDate = date;
+        NSRange range = NSMakeRange(3,[line count] - 3);
+        inProject = [line objectAtIndex:range.location];
+        if([inProject hasPrefix:@"["]) {
+            range.location++;
+            range.length--;
+            if(range.length > 0) {
+                comment = [[line subarrayWithRange:range] componentsJoinedByString:@" "];
+            }
+            else {
+                comment = NSLocalizedString(@"n/a", @"Not available");
+            }
+            inProject = [inProject substringWithRange:NSMakeRange(1, [inProject length] - 1 - 1)];
+        }
+        else {
+            inProject = NSLocalizedString(@"no Project", @"no project specified");
+            comment = [[line subarrayWithRange:range] componentsJoinedByString:@" "];
+        }
+        Project *project = [self projectWithName:inProject];
+        Entry *entry = [self newEntryWithProject:project startDate:inDate endDate:nil comment:comment];
+        return entry;
+    }
+    else {
+        // Clocking out
+        lastEntry.endDate = date;
+        return lastEntry;
+    }	
 }
 
 - (void) readFromString: (NSString *) string  {

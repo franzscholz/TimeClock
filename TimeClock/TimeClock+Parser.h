@@ -22,10 +22,13 @@
 
 #import "TimeClock.h"
 
+@class Entry;
+
 @interface TimeClock (Parser)
 
 #pragma mark Read from File
 
+- (Entry *)parseLine:(NSString*)curLine fromLastEntry:(Entry*)lastEntry;
 - (void)readFromString:(NSString *)string;
 - (BOOL)readFromURL: (NSURL *)url error:(NSError **)error;
 - (BOOL)readFromDefaultError:(NSError **)error;
