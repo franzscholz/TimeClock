@@ -21,6 +21,10 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface TimeClockTests : SenTestCase
+@class TimeClock;
+
+@interface TimeClockTests : SenTestCase {
+    TimeClock *tc;
+}
 
 @end
