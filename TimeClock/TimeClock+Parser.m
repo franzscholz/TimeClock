@@ -52,8 +52,8 @@
     
     // Get the date
     NSString *dateString = [[line subarrayWithRange:NSMakeRange(1, 2)] componentsJoinedByString:@" "];
-    NSDate* date;
-    NSError* error;
+    NSDate* date = nil;
+    NSError* error = nil;
     if(![dateFormatter getObjectValue:&date forString:dateString range:nil error:&error]) {
         NSLog(@"Invalid date %@ line \"%@\": %@", dateString, curLine, error.description);
         return nil;
