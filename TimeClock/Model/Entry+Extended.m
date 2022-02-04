@@ -3,7 +3,7 @@
 //  TimeClock
 //
 //  Created by Franz Scholz on 30.06.08.
-//  Copyright (C) 2008-2013, Franz Scholz <franz@franzscholz.net>, www.franzscholz.net
+//  Copyright (C) 2008-2022, Franz Scholz <franz@franzscholz.net>, www.franzscholz.net
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by

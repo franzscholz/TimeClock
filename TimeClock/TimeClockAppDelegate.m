@@ -3,7 +3,7 @@
 //  TimeClock
 //
 //  Created by Franz Scholz on 24.04.13.
-//  Copyright (C) 2010-2013, Franz Scholz <franz@franzscholz.net>, www.franzscholz.net
+//  Copyright (C) 2010-2022, Franz Scholz <franz@franzscholz.net>, www.franzscholz.net
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -146,7 +146,7 @@
         [[NSApplication sharedApplication] presentError:error];
         return nil;
     }
-    _managedObjectContext = [[NSManagedObjectContext alloc] init];
+    _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     [_managedObjectContext setPersistentStoreCoordinator:coordinator];
 
     return _managedObjectContext;
@@ -211,7 +211,7 @@
 
         NSInteger answer = [alert runModal];
         
-        if (answer == NSAlertAlternateReturn) {
+        if (answer == NSAlertFirstButtonReturn) {
             return NSTerminateCancel;
         }
     }
