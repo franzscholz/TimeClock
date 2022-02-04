@@ -10,4 +10,4 @@ jobs:
 #    - name: Select Xcode
 #      run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
     - name: Run tests
-      run: xcodebuild test -scheme TimeClock -project MyProjectName.xcodeproj | xcpretty && exit ${PIPESTATUS[0]}      
+      run: xcodebuild test -scheme TimeClock -project TimeClock.xcodeproj | xcpretty && exit ${PIPESTATUS[0]}      
