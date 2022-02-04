@@ -30,7 +30,9 @@
 
 - (Entry *)parseLine:(NSString*)curLine fromLastEntry:(Entry*)lastEntry
 {
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] initWithDateFormat:@"%y/%m/%d %H:%M:%S" allowNaturalLanguage:true];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+    [dateFormatter setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
 	NSArray *line = [curLine componentsSeparatedByString:@" "];
     
     // Check if there is enough input
@@ -50,11 +52,10 @@
     
     // Get the date
     NSString *dateString = [[line subarrayWithRange:NSMakeRange(1, 2)] componentsJoinedByString:@" "];
-    NSDate* date = nil;
-    NSString* errorDescription = nil;
-    [dateFormatter getObjectValue:&date forString:dateString errorDescription:&errorDescription];
-    if(date == nil) {
-        NSLog(@"Invalid date %@ line \"%@\": %@", dateString, curLine, errorDescription);
+    NSDate* date;
+    NSError* error;
+    if(![dateFormatter getObjectValue:&date forString:dateString range:nil error:&error]) {
+        NSLog(@"Invalid date %@ line \"%@\": %@", dateString, curLine, error.description);
         return nil;
         
     }

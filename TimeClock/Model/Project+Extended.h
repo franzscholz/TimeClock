@@ -3,7 +3,7 @@
 //  TimeClockAnalyzer
 //
 //  Created by Franz Scholz on 18.12.09.
-//  Copyright (C) 2009-2013, Franz Scholz <franz@franzscholz.net>, www.franzscholz.net
+//  Copyright (C) 2009-2022, Franz Scholz <franz@franzscholz.net>, www.franzscholz.net
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
