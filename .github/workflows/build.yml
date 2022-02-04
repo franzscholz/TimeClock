@@ -9,5 +9,7 @@ jobs:
     - uses: actions/checkout@v2
 #    - name: Select Xcode
 #      run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
+    - name: Build the project
+      run: xcodebuild TimeClock -scheme TimeClock -project TimeClock.xcodeproj | xcpretty && exit ${PIPESTATUS[0]}      
     - name: Run tests
-      run: xcodebuild test -scheme TimeClock -project TimeClock.xcodeproj | xcpretty && exit ${PIPESTATUS[0]}      
+      run: xcodebuild TimeClockTest -scheme TimeClock -project TimeClock.xcodeproj | xcpretty && exit ${PIPESTATUS[0]}      
