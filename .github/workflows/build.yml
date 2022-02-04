@@ -1,0 +1,13 @@
+name: build
+
+on: [push]
+
+jobs:
+  run_tests:
+    runs-on: macos-11
+    steps:
+    - uses: actions/checkout@v2
+#    - name: Select Xcode
+#      run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
+    - name: Run tests
+      run: xcodebuild test -scheme TimeClock -project MyProjectName.xcodeproj | xcpretty && exit ${PIPESTATUS[0]}      
