@@ -1,12 +1,12 @@
-name: build
+name: TimeClock
 
 on: [push]
 
 jobs:
   build_and_test:
-    runs-on: macos-11
+    runs-on: macOS-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 #    - name: Select Xcode
 #      run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
     - name: Build the project
