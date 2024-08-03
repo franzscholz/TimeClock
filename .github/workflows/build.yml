@@ -6,7 +6,7 @@ jobs:
   build_and_test:
     runs-on: macOS-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 #    - name: Select Xcode
 #      run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
     - name: Build the project
