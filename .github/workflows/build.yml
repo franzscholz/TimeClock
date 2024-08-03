@@ -22,5 +22,5 @@ jobs:
         name: artifact
         path: |
           build/
-          !build/Release/TimeClock.docarchive/
+          !build/Release/TimeClock.doccarchive/
 
