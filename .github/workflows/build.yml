@@ -14,4 +14,4 @@ jobs:
     - name: Run tests
       run: xcodebuild test -scheme TimeClock -project TimeClock.xcodeproj | xcpretty && exit ${PIPESTATUS[0]} 
     - name: Build the documentation
-      run: xcodebuild build -scheme Documentation -project TimeClock.xcodeproj | xcpretty && exit ${PIPESTATUS[0]} 
+      run: xcodebuild docbuild -project TimeClock.xcodeproj | xcpretty && exit ${PIPESTATUS[0]} 
