@@ -6,7 +6,8 @@ jobs:
   build_and_test:
     runs-on: macOS-latest
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 #    - name: Select Xcode
 #      run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
     - name: Build the project
@@ -15,3 +16,8 @@ jobs:
       run: xcodebuild test -scheme TimeClock -project TimeClock.xcodeproj | xcpretty && exit ${PIPESTATUS[0]} 
     - name: Build the documentation
       run: xcodebuild docbuild -project TimeClock.xcodeproj | xcpretty && exit ${PIPESTATUS[0]} 
+    - name: Save build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: artifact
+        path: build/
